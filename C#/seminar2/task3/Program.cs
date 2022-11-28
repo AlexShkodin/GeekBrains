@@ -9,7 +9,7 @@ int Prompt(string message)
     return number;
 }
 int input1 = Prompt("Введи первое число");
-int input2 = Prompt("Введи dnjhое число");
+int input2 = Prompt("Введи второе число");
 int div = input1 % input2;
 
 if (div > 0)
