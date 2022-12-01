@@ -1,34 +1,9 @@
-﻿CreateUser("Tom", 37);
-CreateUser("b", -4);
-CreateUser("", 130);
- 
-void CreateUser(string name, int age)
-{
-    User user = new User(name, age);
-    // проверяем корректность значения свойства Name
-    // если его длина в диапазоне от 3 до 50, то оно корректно
-    if (user.Name.Length >= 3 && user.Name.Length <= 50)
-        Console.WriteLine($"Name: {user.Name}");
-    else
-        Console.WriteLine("Incorrect name!");
- 
-    // проверяем корректность значения свойства Age
-    // если оно в диапазоне от 1 до 100, то оно корректно
-    if (age >= 1 && age <= 100)
-        Console.WriteLine($"Age: {user.Age}\n");
-    else
-        Console.WriteLine("Incorrect age!\n");
- 
-}
-public class User
-{
-    public string Name { get; set; }
-    public int Age { get; set; }
- 
-    public User(string name, int age)
-    {
-        Name = name;
-        Age = age;
-    }
-}
+﻿// Задача 2: Напишите программу, которая выводит случайное трёхзначное число
+// и удаляет вторую цифру этого числа. Не использовать строки для расчета.
+// 456 -> 46
+// 782 -> 72
+// 918 -> 98
 
+
+int number = new Random().Next(100,1000);
+System.Console.WriteLine($"Сгенерированное число {number}, а вот что получили {number / 100}{number % 10}");

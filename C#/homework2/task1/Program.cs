@@ -23,20 +23,9 @@ bool ValidateNumber(int number)
     return false;
 }
 
-int number = Prompt("Введите число");
+int number = Prompt("Введите трехзначное число");
 if (ValidateNumber(number))
 {
     int result = (number % 100) / 10;
     System.Console.WriteLine($"Вторая цифра введенного числа {result}");
 }
-
-
-// System.Console.WriteLine("Введите трёхзначное число: ");
-// int ci = Convert.ToInt32(System.Console.ReadLine());
-// string ac = ci.ToString();
-// int[] arrInt = new int[ac.Length];
-// for (int n = 0; n < ac.Length; ++n)
-// {
-//     arrInt[n] = int.Parse(ac[n] + "");
-// }
-// System.Console.WriteLine(ac[1]);
