@@ -11,37 +11,43 @@ int Day(string message)
     return dayNumber;
 }
 int day = Day("Введите день недели > ");
-switch (day)
-{
-    case 1:
-        System.Console.Write($"{day} -> Нет");
-        break;
+// switch (day)   так тоже работает, но условий много
+// {
+//     case 1:
+//         System.Console.Write($"{day} -> Нет");
+//         break;
 
-    case 2:
-        System.Console.Write($"{day} -> Нет");
-        break;
+//     case 2:
+//         System.Console.Write($"{day} -> Нет");
+//         break;
 
-    case 3:
-        System.Console.Write($"{day} -> Нет");
-        break;
+//     case 3:
+//         System.Console.Write($"{day} -> Нет");
+//         break;
 
-    case 4:
-        System.Console.Write($"{day} -> Нет");
-        break;
+//     case 4:
+//         System.Console.Write($"{day} -> Нет");
+//         break;
 
-    case 5:
-        System.Console.Write($"{day} -> Нет");
-        break;
+//     case 5:
+//         System.Console.Write($"{day} -> Нет");
+//         break;
 
-    case 6:
-        System.Console.Write($"{day} -> Да");
-        break;
+//     case 6:
+//         System.Console.Write($"{day} -> Да");
+//         break;
 
-    case 7:
-        System.Console.Write($"{day} -> Да");
-        break;
-    default:
-        System.Console.WriteLine("В неделе всего семь дней");
-        break;
+//     case 7:
+//         System.Console.Write($"{day} -> Да");
+//         break;
+//     default:
+//         System.Console.WriteLine("В неделе всего семь дней");
+//         break;
 
-}
+// }
+if (day > 0 && day <= 5)
+    System.Console.Write($"{day} -> Нет");
+else if (day >= 6 & day <= 7)
+    System.Console.Write($"{day} -> Да");
+else
+    System.Console.Write($"{day}? -> В неделе всего семь дней");
