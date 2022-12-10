@@ -2,13 +2,13 @@
 // Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 
-int[] GenerateArray(int Length, int minRange, int maxRange)
+int[] GenerateArray(int Length, int minValue, int maxValue)
 {
 
     int[] array = new int[Length];
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(minRange, maxRange + 1);
+        array[i] = new Random().Next(minValue, maxValue);
     }
     return array;
 }
@@ -22,30 +22,22 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-int Promt(String message)
+int Search(int[] array)
 {
-    System.Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-
-int[] Multi(int[] Array)
-{
-    int[] result = new int[Array.Length];
-    for (int i = 0; i < Array.Length; i++)
+    int diff = 0;
+    int max = array[0];
+    int min = array[0];
+    for (int i = 0; i < array.Length; i++)
     {
-        result[i] = Array[i] * Array[Array.Length - 1 - i];
+        if (array[i] < min)
+            min = array[i];
+        if (array[i] > max)
+            max = array[i];
     }
-    return result;
+    diff = max - min;
+    return diff;
 }
 
-
-int Length = Promt("Input length of array ");
-int minArray = Promt("Input min of array ");
-int maxArray = Promt("Input max of array ");
-
-int[] array = GenerateArray(Length, minArray, maxArray);
+int[] array = GenerateArray(8,1,30);
 PrintArray(array);
-PrintArray(Multi(array));
-// System.Console.WriteLine($"Count of numbers is {Multi(array)}");
-
+System.Console.WriteLine($"Разница между максимальным и минимальным элементами массива {Search(array)}");
