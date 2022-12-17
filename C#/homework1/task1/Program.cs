@@ -5,11 +5,11 @@
 // a = -9 b = -3 -> max = -3
 
 Console.Write("Введите первое число > ");
-string inputValue1 = Console.ReadLine();
+string inputValue1 = System.Console.ReadLine();
 int value1 = Convert.ToInt32(inputValue1);
 
 Console.Write("Введите второе число > ");
-string inputValue2 = Console.ReadLine();
+string inputValue2 = System.Console.ReadLine();
 int value2 = Convert.ToInt32(inputValue2);
 
 if (value1 > value2)

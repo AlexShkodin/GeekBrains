@@ -13,3 +13,6 @@ int Prompt(string message)
 int num = Prompt("Введи число");
 
 if (num)
+{
+
+}

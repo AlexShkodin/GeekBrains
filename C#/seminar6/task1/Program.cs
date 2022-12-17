@@ -31,12 +31,12 @@ int[] ReverseArray(int[] array)
     return array;
 }
 
-void swap1(int[] array, int i1, int i2)
-{
-    int temp = array[i1];
-    array[i1] = array[i2];
-    array[i2] = temp;
-}
+// void swap1(int[] array, int i1, int i2)
+// {
+//     int temp = array[i1];
+//     array[i1] = array[i2];
+//     array[i2] = temp;
+// }
 
 void swap2(int[] array, int i1, int i2)
 {
